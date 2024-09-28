@@ -36,10 +36,9 @@ jobs:
     - name: Run tests
       run: mix test
 
-  lint:
+  linting:
     name: Build and test
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v4
     - name: Set up Elixir
@@ -55,7 +54,6 @@ jobs:
   containerization:
     runs-on: ubuntu-latest
     needs:
-      - testing
       - linting
     steps:
       - name: Checkout repository
