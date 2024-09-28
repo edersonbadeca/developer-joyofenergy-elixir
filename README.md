@@ -58,11 +58,6 @@ Run the application which will be listening on port 4000
 ```console
 mix phx.server
 ```
-### Pre-commit hooks
-The project is offering [pre-commit](https://pre-commit.com/) hooks, please install them via
-```console
-pre-commit install
-```
 
 ### GitHub Actions
 Each commit in the main branch will trigger a pipeline which will run unit tests and different linting tools.
@@ -78,7 +73,7 @@ docker build -t joy-energy .
 ### Building Docker image
 Once the docker image is built, it can be run with:
 ```console
-docker run -p 8020:8020 joy-energy
+docker run -p 4000:4000 joy-energy
 ```
 
 
